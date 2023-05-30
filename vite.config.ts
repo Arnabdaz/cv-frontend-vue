@@ -27,9 +27,9 @@ export default defineConfig({
             '@': fileURLToPath(new URL('./src/components', import.meta.url)),
         },
     },
-    base: '/simulatorvue/',
+    // base: '/simulatorvue/',
     build: {
-        outDir: '../public/simulatorvue',
+        outDir: '../public',
         assetsDir: 'assets',
         chunkSizeWarningLimit: 1600,
     },
