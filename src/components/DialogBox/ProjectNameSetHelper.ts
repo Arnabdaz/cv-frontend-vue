@@ -16,8 +16,9 @@ export const provideProjectName = async (): Promise<string | undefined> => {
     const projectStore: projectStoreType = useProjectStore()
     projectStore.CreateProjectHelper.changeProjectName = true
     projectStore.CreateProjectHelper.isPersistent = true
-    projectStore.CreateProjectHelper.messageText =
-        'Provide a name for the project'
+    // projectStore.CreateProjectHelper.messageText =
+    //     'Provide a name for the project'
+    // TODO: on cancel do actually cancel
     projectStore.CreateProjectHelper.buttonList = [
         {
             text: 'Save',
@@ -46,3 +47,38 @@ export const provideProjectName = async (): Promise<string | undefined> => {
 
     return projectName
 }
+
+// export const newCircuitName = async (): Promise<string | undefined> => {
+//     const projectStore: projectStoreType = useProjectStore()
+//     projectStore.CreateProjectHelper.changeProjectName = true
+//     projectStore.CreateProjectHelper.isPersistent = true
+//     // projectStore.CreateProjectHelper.messageText =
+//     //     'Provide a name for the new Circuit'
+//     projectStore.CreateProjectHelper.buttonList = [
+//         {
+//             text: 'Save',
+//             emitOption: 'save',
+//         },
+//         {
+//             text: 'Cancel',
+//             emitOption: 'cancel',
+//         },
+//     ]
+//     projectStore.CreateProjectHelper.inputList = [
+//         {
+//             text: 'Enter Circuit Name:',
+//             val: '',
+//             placeholder: 'Untitled-Circuit',
+//             id: 'projectName',
+//             class: 'inputField',
+//             style: '',
+//             type: 'text',
+//         },
+//     ]
+
+//     const projectName = await new Promise<string | undefined>((resolve) => {
+//         resolvePromise = resolve
+//     })
+
+//     return projectName
+// }
