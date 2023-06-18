@@ -4,4 +4,4 @@
 [[redirects]]
   from = "/*"
   to = "/simulatorvue"
-  status = 200
+  status = 301
